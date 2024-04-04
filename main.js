@@ -16,6 +16,7 @@ const scene = new Three.Scene();
 const geometry = new Three.SphereGeometry(3, 64, 64);
 const material = new Three.MeshStandardMaterial({
   color: "#44f",
+  roughness: "0.5",
 });
 const mesh = new Three.Mesh(geometry, material);
 scene.add(mesh);
@@ -23,6 +24,7 @@ scene.add(mesh);
 // Light
 const light = new Three.PointLight(0xffffff, 500);
 light.position.set(10, 10, 10);
+light.intensity = 1000;
 scene.add(light);
 
 // Camera
